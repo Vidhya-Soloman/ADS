@@ -10,6 +10,7 @@ struct node *next;
 };
 struct node *head,*newnode,*temp;
 int choice;
+choice=1;
 head=0;
 while(choice)
 {
