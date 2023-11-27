@@ -15,6 +15,7 @@ struct node *head,*tail,*newnode,*temp;
 void main()
 {
 int choice;
+  choice=1;
 head=0;
 int ch;
 while(choice)
