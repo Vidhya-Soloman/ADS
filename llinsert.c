@@ -4,6 +4,7 @@
 void begin();
 void end();
 void pos();
+void search();
 void display();
 int count;
 struct node
@@ -15,7 +16,6 @@ struct node *head,*newnode,*temp;
 void main()
 {
 int choice;
-  choice=1;
 head=0;
 int ch;
 while(choice)
@@ -41,7 +41,7 @@ while(temp!=0)
 {
 temp=temp->next;
 }
-printf("1.Begin\n2.End\n3.Pos\n4.Display\n5.Exit\n");
+printf("1.Begin\n2.End\n3.Pos\n4.Search\n5.Display\n5.Exit\n");
 printf("Enter your choice");
 scanf("%d",&ch);
 switch(ch)
@@ -55,9 +55,12 @@ break;
 case 3:pos();
 display();
 break;
-case 4:display();
+case 4:search();
+display();
 break;
-case 5:exit(0);
+case 5:display();
+break;
+case 6:exit(0);
 break;
 default:printf("Invalid input");
 break;
@@ -103,6 +106,29 @@ i++;
 newnode->next=temp->next;
 temp->next=newnode;
 }
+//SEARCH
+void search()
+{
+int e,t;
+temp=head;
+printf("enter the element to search");
+scanf("%d",&e);
+while(temp!=0)
+{
+if(temp->data=e)
+t=1;
+break;
+}
+if(t==1)
+{
+printf("Element %d is in the list\n",e);
+}
+else
+{
+printf("not present");
+}
+}
+//DISPLAY
 void display()
 {
 temp=head;
