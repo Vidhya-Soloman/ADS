@@ -115,7 +115,7 @@ printf("enter the element to search");
 scanf("%d",&e);
 while(temp!=0)
 {
-if(temp->data=e)
+if(temp->data==e)
 t=1;
 break;
 }
